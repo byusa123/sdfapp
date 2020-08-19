@@ -1,0 +1,50 @@
+body
+{
+    font-family: candara;
+}
+
+.main
+{
+    width: 100%;
+    height:600px;
+    display:flex;
+background-color:rgb(236,240,241,);
+}
+.main div
+{
+    -ms-flex:1;
+    flex:1
+
+}
+p
+{
+    color: brown;
+
+}
+.myDev
+{
+    margin: 10px;
+}
+.herDiv
+{
+    margin: 10px;
+}
+.theirDiv
+{
+    margin: 10px;
+}
+#drink
+{
+font-style:bold;
+color:gray;
+font-size: 40;
+font-weight: 1000px;
+}
+h2,p
+{
+    color:grey;
+}
+ul
+{
+    color: grey;
+}
