@@ -25,28 +25,31 @@ def ussdapp(request):
         level = text.split("*")
         response=""
         if text=='':
-            response="CON welcome to idatechnology ussd app\n"
-            response +="1.Girls in code \n"
-            response +="2.sdf program "
+            response="CON welcome to gofundme ussd app\n"
+            response +="1.compains \n"
+            response +="2.categories "
         elif text=='1':
-            response="CON welcome to girls in code program\n"
-            response+="1.join the program\n"
-            response+="2.get activity \n" 
+            response="CON welcome to compaigns\n"
+            response+="1.trending\n"
+            response+="2.latest\n" 
             response+="3.leave \n"
             
              
-        elif text=='1*1':
-            response="CON Enter your name"
-        elif text=='1*2':
-            response="CON Enter your pincode"
-        elif text=='1*3':
-            response="CON Enter your name"
+      
+        
             
         elif text=='2':
-            response="CON welcome to girls in code program\n"
-            response+="1.join the program\n"
-            response+="2.get activity \n" 
-            response+="3.leave"
+            response="CON welcome to categories\n"
+            response+="1.business\n"
+            response+="2.community \n"
+            response+="3.education\n"
+            response+="4.emergency \n"
+            response+="5.businessevents\n"
+            response+="6.medical\n"
+            response+="7.non profite\n"
+            response+="8.memorial\n" 
+            response+="9.leave\n"
+            response+="10.leave"
               
              
              
@@ -57,3 +60,4 @@ def ussdapp(request):
     
     
     return HttpResponse('welcome')
+ 
