@@ -1,0 +1,61 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+
+
+
+<html>
+    <head>
+        <title>Welcome to sector's web app</title>
+    </head>
+    <body>
+        <h1>Welcome to Register</h1>
+        <p class="alret alert-warning" >{{message}}</p>
+        <form action="{% url 'registration'%}" method="POST">
+            
+            {% csrf_token %}
+            <label>phone</label> 
+            <input type="text" name="phone"  class="form-control">
+            <label>First name</label> 
+            <input type="text" name="Firstname"  class="form-control">
+            <label>Last name</label>
+            <input type="text" name="Lastname"  class="form-control">
+            <button type="submit" name="submit" class="form-control"></button>
+        
+
+
+
+        </form>
+
+        <table class="table">
+            <tr>
+                <td>id</td>
+                <td>phone</td>
+                <td>Firstname</td>
+                <td>lastname</td>
+                <td>Update</td>
+                <td >Delete</td>
+            </tr>
+            {% for ida in data%}
+            <tr>
+            <td> {{ida.id}}</td>
+            <td> {{ida.phone}}</td>
+            <td> {{ida.Firstname}}</td>
+             <td> {{ida.Lastname}}</td>
+             <td > <a href="{% url 'updateInfos' id=ida.id %}"></a><span class="btn btn-success">update</span</a></td>
+             <td ><a href="{% url 'deleteInfos' id=ida.id %}"><span class="btn btn-danger">Delete</span></a></td>
+            </td>
+            </tr>
+            {% endfor%}
+            
+        </table>
+
+
+
+    </body>
+</html>
+
+
+{% endblock %}
